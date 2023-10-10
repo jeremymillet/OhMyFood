@@ -76,6 +76,13 @@ select {
     scroll-behavior: auto !important;
   }
 }
+body {
+  position: relative;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  background: white;
+}
+
 .disappear {
   animation: vanish 1s forwards;
   animation-delay: 1s;
@@ -112,39 +119,61 @@ select {
   animation: loader-inner 2s infinite ease-in;
 }
 
-body {
-  font-family: "Roboto", sans-serif;
-  font-weight: 500;
-  background: #f6f6f6;
+.restaurant-like svg:hover path {
+  fill: url(#svghover);
+  stroke: transparent;
 }
-body .button-gradient:hover {
+
+.button-gradient-container {
+  display: flex;
+  justify-content: center;
+}
+
+.button-gradient {
+  margin-top: 27px;
+  width: 231px;
+  border: none;
+  border-radius: 25px;
+  padding: 13px 18px;
+  color: white;
+  background: linear-gradient(0deg, #9356dc -11.44%, #ff79da 123.93%);
+  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
+}
+
+.button-gradient:hover {
   opacity: 85%;
   background: linear-gradient(0deg, #9356dc 0.44%, #ff79da 123.93%);
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.35);
 }
-body h1 {
+
+h1 {
   font-family: "Shrikhand", cursive;
 }
-body a {
+
+a {
   text-decoration: none;
   color: black;
 }
-body header {
+
+header {
   display: flex;
   flex-direction: column;
   background-color: white;
 }
-body header .logo-container {
+header .logo-container {
   height: 50px;
   display: flex;
   justify-content: center;
   align-items: center;
   box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
 }
-body header .logo-container img {
+header .logo-container img {
   width: 160px;
 }
-body header .localisation-container {
+header .logo-container .go-back {
+  width: 30px;
+}
+header .localisation-container {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -152,11 +181,12 @@ body header .localisation-container {
   height: 50px;
   background: #eaeaea;
 }
-body header .localisation-container p {
+header .localisation-container p {
   font-size: 16px;
   margin-left: 17px;
 }
-body .hero {
+
+.hero {
   font-size: 18px;
   font-weight: 300;
   line-height: normal;
@@ -168,41 +198,33 @@ body .hero {
   height: 300px;
   background: #f6f6f6;
 }
-body .hero-title {
+.hero-title {
   margin-top: 39px;
   margin-bottom: 10px;
   font-size: 24px;
   font-weight: 700;
   color: black;
 }
-body .hero button {
-  margin-top: 27px;
-  border: none;
-  border-radius: 25px;
-  padding: 13px 18px;
-  color: white;
-  background: linear-gradient(0deg, #9356dc -11.44%, #ff79da 123.93%);
-  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
-}
-body .fonctionnement {
+
+.fonctionnement {
   display: flex;
   flex-direction: column;
   background-color: white;
   padding: 0px 20px;
 }
-body .fonctionnement-title {
+.fonctionnement-title {
   margin-top: 48px;
   font-size: 24px;
   font-weight: 700;
 }
-body .fonctionnement .container-info {
+.fonctionnement .container-info {
   display: flex;
   flex-direction: column;
   align-items: center;
   margin-top: 26px;
   margin-bottom: 68px;
 }
-body .fonctionnement .container-info .number {
+.fonctionnement .container-info .number {
   width: 24px;
   height: 24px;
   position: relative;
@@ -215,7 +237,7 @@ body .fonctionnement .container-info .number {
   background: #9356DC;
   border-radius: 50%;
 }
-body .fonctionnement .container-info .info-fonctionnement {
+.fonctionnement .container-info .info-fonctionnement {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -225,22 +247,24 @@ body .fonctionnement .container-info .info-fonctionnement {
   border-radius: 20px;
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
 }
-body .fonctionnement .container-info .info-fonctionnement p {
+.fonctionnement .container-info .info-fonctionnement p {
   width: 211px;
   font-size: 16px;
   margin-left: 23px;
   background: #fff;
 }
-body .annonce-restaurant {
+
+.annonce-restaurant {
   width: 100%;
   padding: 0px 15px;
+  background-color: #F6F6F6;
 }
-body .annonce-restaurant .restaurant-title {
+.annonce-restaurant .restaurant-title {
   padding-top: 54px;
   font-size: 24px;
   font-weight: 700;
 }
-body .annonce-restaurant .restaurants-container {
+.annonce-restaurant .restaurants-container {
   display: flex;
   width: 100%;
   flex-direction: column;
@@ -248,7 +272,7 @@ body .annonce-restaurant .restaurants-container {
   justify-content: space-between;
   margin-top: 25px;
 }
-body .annonce-restaurant .restaurants-container a {
+.annonce-restaurant .restaurants-container a {
   width: 100%;
   margin-bottom: 18px;
   text-decoration: none;
@@ -257,7 +281,7 @@ body .annonce-restaurant .restaurants-container a {
   font-size: 17px;
   font-weight: 300;
 }
-body .annonce-restaurant .restaurants-container a .status-new {
+.annonce-restaurant .restaurants-container a .status-new {
   width: 80px;
   border-radius: 2px;
   position: absolute;
@@ -266,7 +290,7 @@ body .annonce-restaurant .restaurants-container a .status-new {
   background-color: #99E2D0;
   box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
 }
-body .annonce-restaurant .restaurants-container a .status-new p {
+.annonce-restaurant .restaurants-container a .status-new p {
   display: flex;
   justify-content: center;
   padding: 7px 9px;
@@ -274,7 +298,7 @@ body .annonce-restaurant .restaurants-container a .status-new p {
   font-weight: 500;
   color: #008766;
 }
-body .annonce-restaurant .restaurants-container .restaurant {
+.annonce-restaurant .restaurants-container .restaurant {
   width: 100%;
   height: 251px;
   padding-bottom: 13px;
@@ -282,50 +306,47 @@ body .annonce-restaurant .restaurants-container .restaurant {
   background: #ffffff;
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1);
 }
-body .annonce-restaurant .restaurants-container .restaurant .restaurant-container-img img {
+.annonce-restaurant .restaurants-container .restaurant .restaurant-container-img img {
   width: 100%;
   height: 180px;
   object-fit: cover;
   border-radius: 15px 15px 0px 0px;
 }
-body .annonce-restaurant .restaurants-container .restaurant .restaurant-container-texte {
+.annonce-restaurant .restaurants-container .restaurant .restaurant-container-texte {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 10px 25px 0px 13px;
 }
-body .annonce-restaurant .restaurants-container .restaurant .restaurant-container-texte h3 {
+.annonce-restaurant .restaurants-container .restaurant .restaurant-container-texte h3 {
   font-size: 18px;
   font-weight: 700;
 }
-body .annonce-restaurant .restaurants-container .restaurant .restaurant-container-texte .restaurant-like svg:hover path {
-  fill: url(#svghover);
-  stroke: transparent;
-}
-body footer {
+
+footer {
   height: 186px;
   margin-top: 50px;
   padding: 22px 25px;
   background-color: #353535;
 }
-body footer h1 {
+footer h1 {
   font-size: 18px;
   color: white;
   font-weight: 400;
   margin-bottom: 16px;
 }
-body footer ul {
+footer ul {
   list-style: none;
 }
-body footer ul li {
-  color: white;
+footer ul li {
   font-size: 16px;
   font-weight: 400;
 }
-body footer ul li a {
+footer ul li a {
   display: flex;
+  color: white;
 }
-body footer ul li strong {
+footer ul li strong {
   font-weight: 500;
   margin-left: 11px;
 }
@@ -469,6 +490,127 @@ body footer ul li strong {
   }
   100% {
     height: 0%;
+  }
+}
+.go-back {
+  position: absolute;
+  top: 10px;
+  left: 20px;
+}
+
+.hero-restaurant {
+  width: 100%;
+  height: 275px;
+}
+.hero-restaurant img {
+  object-fit: cover;
+  width: 100%;
+  height: 275px;
+}
+
+.menu-entrees, .menu-plats, .menu-desserts {
+  margin-top: 40px;
+}
+.menu-entrees-title div, .menu-plats-title div, .menu-desserts-title div {
+  width: 40px;
+  border: solid 2px #99E2D0;
+}
+
+.menu {
+  position: relative;
+  background-color: #F6F6F6;
+  border-radius: 25px;
+  border: solid transparent;
+  padding: 0px 15px;
+  top: -30px;
+}
+.menu h2 {
+  font-size: 16px;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+.menu-title-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-top: 32px;
+}
+.menu-title-container .menu-title {
+  font-size: 28px;
+  font-weight: 400;
+}
+.menu .card:hover .select {
+  display: flex;
+}
+.menu .card {
+  height: 79px;
+  display: flex;
+  padding-left: 15px;
+  justify-content: space-between;
+  align-items: flex-end;
+  background-color: white;
+  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
+  margin-top: 12px;
+  border-radius: 15px;
+}
+.menu .card .prix {
+  padding: 0px 15px 15px 0px;
+}
+.menu .card .select {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  background-color: #99E2D0;
+  width: 59px;
+  height: 79px;
+  border-radius: 0px 15px 15px 0px;
+}
+.menu .card .select svg {
+  width: 100%;
+}
+.menu .card .entrees-name, .menu .card .plat-name, .menu .card .desserts-name {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  margin-bottom: 15px;
+  width: 90%;
+}
+.menu .card .entrees-name h3, .menu .card .entrees-name p, .menu .card .plat-name h3, .menu .card .plat-name p, .menu .card .desserts-name h3, .menu .card .desserts-name p {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.menu .card .entrees-name h3, .menu .card .plat-name h3, .menu .card .desserts-name h3 {
+  font-size: 18px;
+  font-weight: 500;
+}
+.menu .card .entrees-name p, .menu .card .plat-name p, .menu .card .desserts-name p {
+  margin-right: 3px;
+  font-size: 15px;
+  font-weight: 300;
+}
+
+@media (min-width: 1024px) {
+  .menu {
+    margin: 0% 15%;
+    padding: 15px 60px;
+  }
+  .menu-title {
+    margin-right: 24px;
+  }
+  .menu-title-container {
+    justify-content: center;
+  }
+  .go-back {
+    position: absolute;
+    top: 30px;
+    left: 20px;
+  }
+}
+@media (min-width: 1440px) {
+  .menu {
+    margin: 0px 250px;
+    padding: 15px 210px;
   }
 }
 
