@@ -1,0 +1,53 @@
+.menu {
+  position: relative;
+  background-color: #f6f6f6;
+  border-radius: 25px;
+  border: solid transparent;
+  padding: 0px 15px 40px 15px;
+  margin: -30px 0px 0px 0px;
+  h2 {
+    font-size: 16px;
+    font-weight: 300;
+    text-transform: uppercase;
+  }
+  &-title-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-top: 32px;
+    .menu-title {
+      font-size: 28px;
+      font-weight: 400;
+    }
+  }
+  .menu-entrees,
+  .menu-plats,
+  .menu-desserts {
+    &-title {
+      margin-top: 40px;
+      div {
+        width: 40px;
+        border: solid 2px $Tertiaire;
+      }
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  .menu {
+    margin: -30px 15% 0px 15%;
+    padding: 15px 60px 40px 60px;
+    &-title {
+      margin-right: 24px;
+    }
+    &-title-container {
+      justify-content: center;
+    }
+  }
+}
+@media (min-width: 1440px) {
+  .menu {
+    margin: -30px 250px 0px 250px;
+    padding: 15px 210px 40px 210px;
+  }
+}

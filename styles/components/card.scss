@@ -1,0 +1,157 @@
+.card:hover {
+  .select {
+    width: 59px;
+  }
+}
+.card {
+  height: 79px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  background-color: white;
+  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
+  margin-top: 12px;
+  border-radius: 15px;
+  opacity: 0; /* Rendre les cartes initialement invisibles */
+  animation: fadin 1s;
+  .prix {
+    padding: 0px 15px 15px 0px;
+  }
+  .select {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $Tertiaire;
+    width: 0px;
+    height: 79px;
+    border-radius: 0px 15px 15px 0px;
+    transition: all 0.5s;
+    svg path {
+      width: 100%;
+    }
+  }
+  .entrees-name,
+  .plat-name,
+  .desserts-name {
+    min-width: 0;
+    padding: 15px;
+    flex-grow: 1;
+    h3,
+    p {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+    h3 {
+      font-size: 18px;
+      font-weight: 500;
+    }
+    p {
+      margin-right: 3px;
+      font-size: 15px;
+      font-weight: 300;
+    }
+  }
+}
+
+
+@keyframes fadin {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+.card:nth-of-type(2) {
+  opacity: 0;
+  animation: fadin 0.5s;
+  animation-delay: 400ms;
+  animation-fill-mode: forwards;
+}
+.card:nth-of-type(3) {
+  opacity: 0;
+  animation: fadin 0.5s;
+  animation-delay: 500ms;
+  animation-fill-mode: forwards;
+}
+
+.card:nth-of-type(4) {
+  opacity: 0;
+  animation: fadin 0.5s;
+  animation-delay: 600ms;
+  animation-fill-mode: forwards;
+}
+
+.card:nth-of-type(5) {
+  opacity: 0;
+  animation: fadin 0.5s;
+  animation-delay: 700ms;
+  animation-fill-mode: forwards;
+}
+
+.card:nth-of-type(6) {
+  opacity: 0;
+  animation: fadin 0.5s;
+  animation-delay: 800ms;
+  animation-fill-mode: forwards;
+}
+
+.card:nth-of-type(7) {
+  opacity: 0;
+  animation: fadin 0.5s;
+  animation-delay: 900ms;
+  animation-fill-mode: forwards;
+}
+
+.card:nth-of-type(8) {
+  opacity: 0;
+  animation: fadin 0.5s;
+  animation-delay: 1000ms;
+  animation-fill-mode: forwards;
+}
+
+.card:nth-of-type(9) {
+  opacity: 0;
+  animation: fadin 0.5s;
+  animation-delay: 1100ms;
+  animation-fill-mode: forwards;
+}
+
+.card:nth-of-type(10) {
+  opacity: 0;
+  animation: fadin 0.5s;
+  animation-delay: 1200ms;
+  animation-fill-mode: forwards;
+}
+
+.card:nth-of-type(11) {
+  opacity: 0;
+  animation: fadin 0.5s;
+  animation-delay: 1300ms;
+  animation-fill-mode: forwards;
+}
+
+.card:nth-of-type(12) {
+  opacity: 0;
+  animation: fadin 0.5s;
+  animation-delay: 1400ms;
+  animation-fill-mode: forwards;
+}
+
+.card:nth-of-type(13) {
+  opacity: 0;
+  animation: fadin 0.5s;
+  animation-delay: 1500ms;
+  animation-fill-mode: forwards;
+}
+
+.card:nth-of-type(14) {
+  opacity: 0;
+  animation: fadin 0.5s;
+  animation-delay: 1600ms;
+  animation-fill-mode: forwards;
+}
+
